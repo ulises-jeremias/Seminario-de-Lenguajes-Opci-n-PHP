@@ -1,7 +1,7 @@
 <?php
 
 function Users() {
-  $db = new Conexion();
+  $db = new Connection();
   $sql = $db->query("SELECT * FROM users;");
   if($db->rows($sql) > 0) {
     //make users matrix to return

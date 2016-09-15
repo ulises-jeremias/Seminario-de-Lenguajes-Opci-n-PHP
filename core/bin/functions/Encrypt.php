@@ -9,7 +9,4 @@ function Encrypt($string) {
   return md5($str);
 }
 
-
-
-
 ?>

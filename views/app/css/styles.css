@@ -8,10 +8,10 @@
 
 body {
 	min-height: 100vh;
-	background:url(../img/bg.jpg); /* Nuestra imagen de fondo */
-	background-repeat:no-repeat; /* Indicamos que no se repetira */
-	background-size: cover; /* Encajamos la imagen al 100% del ancho */
-	background-attachment: fixed; /* Establecemos una posicion fija para la imagen */
+	background:url(../img/bg.jpg);
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
 	font-family:helvetica, arial, sans-serif;
 }
 
@@ -23,7 +23,7 @@ body {
 
 .contenedor > article {
 	/*background:rgba(24,8,33,.9);*/
-	background:rgba(0,0,0, .45);
+	background:rgba(0,0,0, .55);
 	padding:20px;
 	margin:20px 0;
 	color:#fff;
@@ -35,7 +35,7 @@ body {
 }
 
 .contenedor>article>hr {
-	background:#6e2a8d;
+	background:#F64740;
 	height:5px;
 	border:none;
 }
@@ -67,7 +67,7 @@ footer p{
   padding: 30px 15px 30px 15px;
   margin-bottom: 30px;
   margin-top: 45px;
-  background:rgba(0,0,0,0.55);
+  background:rgba(0,0,0,.8);
 }
 .jumb h1 {
   color: #fff;
@@ -81,9 +81,7 @@ footer p{
 .jumb > hr {
   border-top-color: #d5d5d5;
 }
-/*.jumb {
-  border-radius: 6px;
-}*/
+
 .jumb {
   max-width: 100%;
 }
@@ -162,7 +160,7 @@ h1 { color: #636363; }
 
 h3 { color: #4a89dc; }
 
-form {
+.form {
 	max-width: 400px;
 	margin: 10vh auto;
 	padding: 1vh 2vw;
@@ -355,9 +353,9 @@ form {
 /*____________________________________ boton para subir en pantalla _______________________________________________________________________________________________*/
 .ir-arriba {
 	display: none;
-	padding:8px;
+	padding:5.5px 7.5px;
 	background:rgba(0,0,0,0.5);
-	font-size: 20px;
+	font-size: 18px;
 	color:#009688;
 	cursor: pointer;
 	position: fixed;

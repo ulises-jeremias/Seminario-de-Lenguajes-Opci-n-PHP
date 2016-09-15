@@ -1,8 +1,10 @@
 <?php
+
 /**
- * created by Ulises J. Cornejo Fandos in 3/8/2016
+ * created by Ulises J. Cornejo Fandos in 3/9/2016
  */
-class Conexion extends mysqli
+
+class Connection extends mysqli
 {
 
   public function __construct()
@@ -27,4 +29,5 @@ class Conexion extends mysqli
     return mysqli_fetch_array($query);
   }
 }
+
 ?>
