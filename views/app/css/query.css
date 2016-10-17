@@ -1,5 +1,9 @@
 @media screen and (max-width: 480px){
 
+	.jumb {
+		margin-top: 25px;
+	}
+
 	.leftmenu{
 		top: 18vh;
 		width: 10em;
@@ -16,7 +20,7 @@
 
 	.leftmenu ul li a:hover {
 		color: #fff;
-		background: #6e2a8d; 
+		background: #6e2a8d;
 		padding: 3.2vh 9.5em;
 		font-size: 5vw;
 	}

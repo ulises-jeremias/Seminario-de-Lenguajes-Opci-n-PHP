@@ -1,6 +1,6 @@
 <div class="modal fade" id="Login" role="dialog">
    <div class="modal-dialog">
-     <div class="modal-content">
+     <div class="modal-content" style="background: #fafafa;">
 
        <div id="_AJAX_LOGIN_"></div>
 
@@ -13,7 +13,7 @@
            <div class="group">
              <input type="text" id="email_login" name="email">
              <span class="highlight"></span><span class="bar"></span>
-             <label for="email_login">Username or Email</label>
+             <label for="email_login">Email</label>
            </div>
            <div class="group">
              <input type="password" id="pass_login" name="password">

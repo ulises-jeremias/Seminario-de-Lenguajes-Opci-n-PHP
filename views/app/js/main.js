@@ -4,7 +4,7 @@ function prepare_view(){
         p = document.createElement('p'),
         span = document.createElement('span');
 
-    p.innerHTML = '&copy; COD Project';
+    p.innerHTML = '&copy; Dealership';
     footer.appendChild(p);
     span.className = 'ir-arriba fa-arrow-up';
     body[0].appendChild(footer);

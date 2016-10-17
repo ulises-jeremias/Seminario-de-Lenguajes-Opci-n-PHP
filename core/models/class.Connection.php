@@ -14,6 +14,11 @@ class Connection extends mysqli
     $this->set_charset("utf-8");
   }
 
+  public function get_array($query)
+  {
+    return mysqli_fetch_array($query);
+  }
+
   public function rows($query)
   {
     return mysqli_num_rows($query);
@@ -22,11 +27,6 @@ class Connection extends mysqli
   public function break_free($query)
   {
     return mysqli_free_result($query);
-  }
-
-  public function travel($query)
-  {
-    return mysqli_fetch_array($query);
   }
 }
 

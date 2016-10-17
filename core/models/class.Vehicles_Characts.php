@@ -3,18 +3,30 @@
    * creado por Ulises J. Cornejo Fandos  in 8/9/2016
    */
 
-  class Vehicle_Category implements Functions
+  class Vehicle_Characts //implements Functions
   {
     private $db;
     private $id;
-    private $idVehicle;
-    private $idCategory;
 
     public function __construct()
     {
       $this->db = new Connection();
+      $args = func_get_args();
+      $nargs = func_num_args();
+      switch ($nargs) {
+        case 1:
+            $this->__construct0($args[0]);
+          break;
+      }
     }
 
+    private function __construct0($id)
+    {
+      $this->id = $id;
+    }
+
+
+/*
     public function Error()
     {
 
@@ -34,10 +46,11 @@
     {
 
     }
+*/
 
     public function __destruct()
     {
-      this->$db->close();
+      $this->db->close();
     }
   }
 

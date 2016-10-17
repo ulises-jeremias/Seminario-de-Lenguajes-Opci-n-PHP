@@ -14,7 +14,7 @@ function goLogin() {
         pass = __('pass_login').value,
         session = __('session_login').checked ? true : false,
         query = login_query(email, pass);
-    if(!query[0] && !query[1]){
+    if(!query[0] && !query[1]) {
       form = 'email=' + email + '&pass=' + pass + '&session=' + session;
       connect = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
       connect.onreadystatechange = () => {
@@ -41,6 +41,7 @@ function goLogin() {
       connect.open('POST','ajax.php?mode=login',true);
       connect.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
       connect.send(form);
+      location.reload();
     } else {
       result = '<div class="alert alert-dismissible alert-danger">';
       result += '<button type="button" class="close" data-dismiss="alert">x</button>';
