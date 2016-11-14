@@ -10,8 +10,8 @@ function login_query(email, pass) {
 function goLogin() {
   try{
     var connect, form, response, result,
-        email = __('email_login').value,
-        pass = __('pass_login').value,
+        email = __('email').value,
+        pass = __('pass').value,
         session = __('session_login').checked ? true : false,
         query = login_query(email, pass);
     if(!query[0] && !query[1]) {
@@ -21,8 +21,8 @@ function goLogin() {
         if(connect.readyState == 4 && connect.status == 200) {
           if(connect.responseText == 1) {
             result = '<div class="alert alert-dismissible alert-success">';
-            result += '<h4>Conectado!</h4>';
-            result += '<p><strong>Estamos redireccionandote...</strong></p>';
+            result += '<h4>Conected!</h4>';
+            result += '<p><strong> You are being redirected...</strong></p>';
             result += '</div>';
             __('_AJAX_LOGIN_').innerHTML = result;
             location.reload();
@@ -32,8 +32,8 @@ function goLogin() {
         } else if(connect.readyState != 4) {
           result = '<div class="alert alert-dismissible alert-warning">';
           result += '<button type="button" class="close" data-dismiss="alert">x</button>';
-          result += '<h4>Procesando...</h4>';
-          result += '<p><strong>Estamos intentando logearte....</strong></p>';
+          result += '<h4>Processing...</h4>';
+          result += '<p><strong> You are initiating session...</strong></p>';
           result += '</div>';
           __('_AJAX_LOGIN_').innerHTML = result;
         }
@@ -46,9 +46,9 @@ function goLogin() {
       result = '<div class="alert alert-dismissible alert-danger">';
       result += '<button type="button" class="close" data-dismiss="alert">x</button>';
       if(pass == null || pass.length == 0 || email == null || email.length == 0){
-        result += '<strong>ERROR:</strong> Todos los datos deben estar llenos.';
+        result += '<strong>ERROR:</strong> All data must be full.';
       } else {
-        result += '<strong>ERROR:</strong> Email o Password contienen caracteres inválidos';
+        result += '<strong>ERROR:</strong> Email or Password contain invalid characters';
       }
       result += '</div>';
       __('_AJAX_LOGIN_').innerHTML = result;

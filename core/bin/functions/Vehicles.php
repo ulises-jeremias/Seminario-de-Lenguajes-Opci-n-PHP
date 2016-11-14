@@ -13,15 +13,12 @@ function Vehicles()
     while ($d = $db->get_array($sql)){
       $vehicles[$d['idVehiculo']] = array(
         'id' => $d['idVehiculo'],
-        'charact' => $d['Caracteristica'],
-        'tipo' => $d['Tipo'],
-        'modelo' => $d['Modelo'],
-        'marca' => $d['Marca'],
-        'dominio' => $d['Dominio'],
-        'anio' => $d['Anio'],
-        'precio' => $d['Precio'],
-        /*'contenidoImg' => $d['contenidoImagen'],
-        'tipoImg' => $d['tipoImagen'],*/
+        'type' => $d['Tipo'],
+        'model' => $d['Modelo'],
+        'brand' => $d['Marca'],
+        'domain' => $d['Dominio'],
+        'year' => $d['Anio'],
+        'price' => $d['Precio'],
       );
     }
   } else {

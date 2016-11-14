@@ -26,7 +26,7 @@
                     </a>
                     <ul class="dropdown-menu">
                       <?php
-                        if(isset($_SESSION['app_id'])){
+                        if(isLoggedIn()){
                           echo ('
                           <li><a href="#"><i class="glyphicon glyphicon-user"></i> ' . ($_users[$_SESSION['app_id']]['name']) . '</a></li>
                           <li><a href="?view=logout"><i class="glyphicon glyphicon-log-out"></i> Log Out</a></li>
@@ -48,10 +48,9 @@
 </nav>
 
 <?php
-if(!isset($_SESSION['app_id'])) {
+if(!isLoggedIn()) {
   include(HTML_DIR . '/public/login.php');
   include(HTML_DIR . '/public/signup.php');
 }
 include(HTML_DIR . '/public/search.php');
-
 ?>

@@ -14,9 +14,9 @@ function Vehicles_Characteristics()
     //make Vehicles_Characteristics matrix to return
     while ($d = $db->get_array($sql)) {
       $vehicles_characts[$d['idVehiculoCaracteristica']] = array(
-        'id_charact' => $d['idCaracteristica'],
-        'charact' => $d['Caracteristica'],
-        'id_vehicle' => $d['idVehiculo'],
+        'idCharact' => $d['idCaracteristica'],
+        'Characteristic' => $d['Caracteristica'],
+        'idVehicle' => $d['idVehiculo'],
       );
     }
   } else {

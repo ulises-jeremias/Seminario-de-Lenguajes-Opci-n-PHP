@@ -8,15 +8,15 @@
        <div class="modal-body">
          <form role="form" method="post" action="?view=vehicles">
            <div class="form-group">
-              <label for="characts" class="col-md-2 control-label">Characts</label>
+              <label for="charact" class="col-md-2 control-label">Characts</label>
               <div class="col-md-10">
-                <select id="characts" class="form-control" name="charact">
+                <select multiple id="charact" class="form-control" name="charact">
                   <?php
-                     $HTML = '<option value="0">All charac</option>';
+                     $HTML = '';
                      $_characts = get_characts();
                      if (false != $_characts){
                        foreach ($_characts as $id => $content_array) {
-                         $HTML .= '<option name="type" value="'.$id.'">'.$_characts[$id]['charact'].'</option>';
+                         $HTML .= '<option value="'.$id.'">'.$_characts[$id]['charact'].'</option>';
                        }
                        echo $HTML;
                      }
@@ -27,13 +27,13 @@
            <div class="form-group">
               <label for="types" class="col-md-2 control-label">Types</label>
               <div class="col-md-10">
-                <select id="types"  class="form-control" name="type">
+                <select id="type"  class="form-control" name="type">
                   <?php
                      $HTML = '<option value="0">All types</option>';
                      $_types = get_types();
                      if (false != $_types){
                        foreach ($_types as $id => $content_array) {
-                         $HTML .= '<option name="type" value="'.$id.'">'.$_types[$id]['type'].'</option>';
+                         $HTML .= '<option value="'.$id.'">'.$_types[$id]['type'].'</option>';
                        }
                        echo $HTML;
                      }
@@ -44,13 +44,13 @@
            <div class="form-group">
               <label for="models" class="col-md-2 control-label">Models</label>
               <div class="col-md-10">
-                <select id="types"  class="form-control" name="model">
+                <select id="model"  class="form-control" name="model">
                   <?php
                      $HTML = '<option value="0">All models</option>';
                      $_models = get_models();
                      if (false != $_models){
                        foreach ($_models as $id => $content_array) {
-                         $HTML .= '<option name="type" value="'.$id.'">'.$_models[$id]['model'].'</option>';
+                         $HTML .= '<option value="'.$id.'">'.$_models[$id]['model'].'</option>';
                        }
                        echo $HTML;
                      }
@@ -59,15 +59,15 @@
               </div>
            </div>
            <div class="form-group">
-              <label for="marcas" class="col-md-2 control-label">Marcas</label>
+              <label for="brands" class="col-md-2 control-label">Brands</label>
               <div class="col-md-10">
-                <select id="marcas"  class="form-control" name="marca">
+                <select id="brand"  class="form-control" name="brand">
                   <?php
-                     $HTML = '<option value="0">All marcas</option>';
-                     $_marcas = get_marcas();
-                     if (false != $_marcas){
-                       foreach ($_marcas as $id => $content_array) {
-                         $HTML .= '<option name="type" value="'.$id.'">'.$_marcas[$id]['marca'].'</option>';
+                     $HTML = '<option value="0">All brands</option>';
+                     $_brands = get_brands();
+                     if (false != $_brands){
+                       foreach ($_brands as $id => $content_array) {
+                         $HTML .= '<option value="'.$id.'">'.$_brands[$id]['brand'].'</option>';
                        }
                        echo $HTML;
                      }

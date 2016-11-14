@@ -6,7 +6,7 @@ function prepare_view(){
 
     p.innerHTML = '&copy; Dealership';
     footer.appendChild(p);
-    span.className = 'ir-arriba fa-arrow-up';
+    span.className = 'fa fa-arrow-up ir-arriba';
     body[0].appendChild(footer);
     body[0].appendChild(span);
 };

@@ -12,16 +12,16 @@ body {
 	background-repeat:no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	font-family:helvetica, arial, sans-serif;
+	font-family: "Roboto";
 }
 
-.contenedor {
+.umd_container {
 	width: 100%;
 	max-width:900px;
 	margin:auto;
 }
 
-.contenedor > article {
+.umd_container > article {
 	/*background:rgba(24,8,33,.9);*/
 	background:rgba(0,0,0, .55);
 	padding:20px;
@@ -30,21 +30,21 @@ body {
 	box-shadow:0 5px 5px 3px rgba(0, 0, 0, 0.25);
 }
 
-.contenedor>article>h2 {
+.umd_container>article>h2 {
 	color:#fff;
 }
 
-.contenedor>article>hr {
+.umd_container>article>hr {
 	background:#F64740;
 	height:5px;
 	border:none;
 }
 
-.contenedor>article>p {
+.umd_container>article>p {
 	line-height: 25px;
 }
 
-.contenedor>article>h2, .contenedor>article>p, .contenedor>article>hr {
+.umd_container>article>h2, .umd_container>article>p, .umd_container>article>hr {
 	margin-bottom: 20px;
 }
 
@@ -63,56 +63,56 @@ footer p{
 	color:#fff;
 }
 
-.jumb {
+.umd_jumb {
   padding: 30px 15px 30px 15px;
   margin-bottom: 30px;
   margin-top: 40px;
   background:rgba(0,0,0,.8);
 }
-.jumb h1 {
+.umd_jumb h1 {
   color: #fff;
 }
-.jumb p {
+.umd_jumb p {
   margin-bottom: 15px;
   font-size: 20px;
   font-weight: 200;
   color: #fff;
 }
-.jumb > hr {
+.umd_jumb > hr {
   border-top-color: #d5d5d5;
 }
 
-.jumb {
+.umd_jumb {
   max-width: 100%;
 }
 
-.jumb2 {
+.umd_jumb2 {
   padding: 30px 15px;
   margin-bottom: 30px;
   margin-top: 45px;
 }
-.jumb2 h1 {
+.umd_jumb2 h1 {
   color: #000;
 }
-.jumb2 p {
+.umd_jumb2 p {
   margin-bottom: 15px;
   font-size: 20px;
   font-weight: 200;
   color: #000;
 }
-.jumb2 > hr {
+.umd_jumb2 > hr {
   border-top-color: #d5d5d5;
 }
-.jumb2 {
+.umd_jumb2 {
   border-radius: 6px;
 }
-.jumb2 {
+.umd_jumb2 {
   max-width: 100%;
 }
 
-/*_____________________________ logo ____________________________________________________________________________________________________________________________*/
+/*_____________________________ umd_logo ____________________________________________________________________________________________________________________________*/
 
-.logo {
+.umd_logo {
 	position: fixed;
 	width: 7em;
 	float: left;
@@ -123,7 +123,7 @@ footer p{
 	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
 }
 
-.logo img {
+.umd_logo img {
 	width: 100%
 }
 
@@ -369,18 +369,18 @@ h3 { color: #4a89dc; }
 
 /*------Switch------------------*/
 
-.material-switch > input[type="checkbox"] {
+.umd_material-switch > input[type="checkbox"] {
     display: none;
 }
 
-.material-switch > label {
+.umd_material-switch > label {
     cursor: pointer;
     height: 0px;
     position: relative;
     width: 40px;
 }
 
-.material-switch > label::before {
+.umd_material-switch > label::before {
     background: rgb(0, 0, 0);
     box-shadow: inset 0px 0px 10px #009688;
     border-radius: 8px;
@@ -392,7 +392,7 @@ h3 { color: #4a89dc; }
     transition: all 0.4s ease-in-out;
     width: 40px;
 }
-.material-switch > label::after {
+.umd_material-switch > label::after {
     background: rgb(255, 255, 255);
     border-radius: 16px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
@@ -405,16 +405,16 @@ h3 { color: #4a89dc; }
     transition: all 0.3s ease-in-out;
     width: 24px;
 }
-.material-switch > input[type="checkbox"]:checked + label::before {
+.umd_material-switch > input[type="checkbox"]:checked + label::before {
     background: #009688;
     opacity: 0.5;
 }
-.material-switch > input[type="checkbox"]:checked + label::after {
+.umd_material-switch > input[type="checkbox"]:checked + label::after {
     background: #009688;
     left: 20px;
 }
 
-.material-switch > span {
+.umd_material-switch > span {
 	color: #009688;
 	font-size: 18px;
 	font-weight: normal;
@@ -427,7 +427,7 @@ h3 { color: #4a89dc; }
  text-align: center;
 }
 
-.characteristic {
+.vehicles_management{
   background: #2c2c2c;
   color: #dfeff9;
   font-weight: 100;
@@ -492,3 +492,16 @@ a:hover {
 	padding:4px;
 	margin-top: 10px;
 }
+
+/*------------------------------------vehicles view----------------------------*/
+
+._vehicle_img_ {
+	float: left;
+	max-width: 400px;
+	background-size: contain;
+	margin-right: 25px;
+}
+
+.texto-L, .texto-R { width: 200px; }
+.texto-L { float: left; text-align:right; }
+.texto-R { float: right; text-align:left; }

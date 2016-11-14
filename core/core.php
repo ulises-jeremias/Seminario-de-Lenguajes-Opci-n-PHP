@@ -9,10 +9,10 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 
 #Connection Constants
 define('DB_HOST','localhost');
-#define('DB_USER','root');
-#define('DB_PASS','');
-define('DB_USER','grupo24');
-define('DB_PASS','AeJu4uni');
+define('DB_USER','root');
+define('DB_PASS','');
+#define('DB_USER','grupo24');
+#define('DB_PASS','AeJu4uni');
 define('DB_NAME','grupo24');
 
 #APP Constants
@@ -22,9 +22,6 @@ define('APP_COPY','Copyright &copy; ' . date('Y',time()) . APP_TITLE);
 define('APP_URL','http://www.dealership.com/');
 
 require('core/models/class.Connection.php');
-require('core/models/interfaces/interface.functions.php');
-require('core/models/class.Vehicle.php');
-require('core/models/class.Vehicles_Characts.php');
 require('core/bin/functions/Encrypt.php');
 require('core/bin/functions/Users.php');
 require('core/bin/functions/getSearchQuery.php');

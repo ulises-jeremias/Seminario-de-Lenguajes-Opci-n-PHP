@@ -15,7 +15,7 @@ if(!empty($_POST['email']) and !empty($_POST['pass'])) {
   } else {
     echo '<div class="alert alert-dismissible alert-danger">
     <button type="button" class="close" data-dismiss="alert">x</button>
-    <strong>ERROR:</strong> Las credenciales son incorrectas.
+    <strong>ERROR:</strong> Credentials are incorrect.
   </div>';
   }
   $db->break_free($sql);
@@ -23,7 +23,7 @@ if(!empty($_POST['email']) and !empty($_POST['pass'])) {
 } else {
   echo '<div class="alert alert-dismissible alert-danger">
   <button type="button" class="close" data-dismiss="alert">x</button>
-  <strong>ERROR:</strong> Todos los datos deben estar llenos.
+  <strong>ERROR:</strong> All data must be full.
 </div>';
 }
 

@@ -12,12 +12,12 @@ $sql = $db->query("SELECT idUsuario FROM usuarios WHERE email='$email' LIMIT 1;"
 if($db->rows($sql) > 0) {
   $HTML = '<div class="alert alert-dismissible alert-danger">
   <button type="button" class="close" data-dismiss="alert">x</button>
-  <strong>ERROR:</strong> El email ingresado ya existe.
+  <strong>ERROR:</strong>The email entered already exists.
 </div>';
 } else {
   $db->query("INSERT INTO usuarios (clave, apellido, nombre, email, telefono)
               VALUES ('$pass', '$surname', '$name', '$email', '$tel');");
-  $sql_2 = $db->query("SELECT MAX('idUsuario') AS idUsuario FROM usuarios;");
+  $sql_2 = $db->query("SELECT MAX(idUsuario) AS idUsuario FROM usuarios;");
   $data = $db->get_array($sql_2);
   $_SESSION['app_id'] = $data['idUsuario'];
   $db->break_free($sql_2);

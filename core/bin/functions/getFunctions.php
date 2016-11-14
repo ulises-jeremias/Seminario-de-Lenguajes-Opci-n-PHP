@@ -4,6 +4,11 @@
  * creado por Ulises J. Cornejo Fandos  in 2/10/2016
  */
 
+ function isLoggedIn()
+ {
+     return (isset($_SESSION['app_id']));
+ }
+
 function get_types ()
 {
   $db = new Connection();
@@ -28,13 +33,15 @@ function get_types ()
 function get_models ()
 {
   $db = new Connection();
-  $sql = $db->query("SELECT * FROM Modelos;");
+  $sql = $db->query("SELECT * FROM Modelos M INNER JOIN Marcas m ON (M.idMarca = m.idMarca)
+                     ORDER BY m.Marca;");
   if ($db->rows($sql) > 0) {
     //make Types matrix to return
     while ($d = $db->get_array($sql)) {
       $vehicle_models[$d['idModelo']] = array(
         'id_model' => $d['idModelo'],
         'model' => $d['Modelo'],
+        'brand' => $d['Marca']
       );
     }
   } else {
@@ -46,25 +53,25 @@ function get_models ()
   return $vehicle_models;
 }
 
-function get_marcas ()
+function get_brands ()
 {
   $db = new Connection();
   $sql = $db->query("SELECT * FROM Marcas;");
   if ($db->rows($sql) > 0) {
     //make Types matrix to return
     while ($d = $db->get_array($sql)) {
-      $vehicle_marcas[$d['idMarca']] = array(
-        'id_marca' => $d['idMarca'],
-        'marca' => $d['Marca'],
+      $vehicle_brands[$d['idMarca']] = array(
+        'id_brand' => $d['idMarca'],
+        'brand' => $d['Marca'],
       );
     }
   } else {
-    $vehicle_marcas = false; //if can not generate the matrix, return false
+    $vehicle_brands = false; //if can not generate the matrix, return false
   }
 
   $db->break_free($sql);
   $db->close();
-  return $vehicle_marcas;
+  return $vehicle_brands;
 }
 
 function get_characts ()

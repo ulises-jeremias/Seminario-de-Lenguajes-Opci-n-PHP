@@ -11,21 +11,21 @@
        <div class="modal-body">
          <div role="form" onkeypress="return runScriptLogin(event)">
            <div class="group">
-             <input type="text" id="email_login" name="email">
+             <input type="text" id="email" name="email">
              <span class="highlight"></span><span class="bar"></span>
-             <label for="email_login">Email</label>
+             <label for="email">Email</label>
            </div>
            <div class="group">
-             <input type="password" id="pass_login" name="password">
+             <input type="password" id="pass" name="password">
              <span class="highlight"></span><span class="bar"></span>
-             <label for="pass_login">Password</label>
+             <label for="pass">Password</label>
            </div>
            <div class="group">
                <div class="">
-                   <div class="material-switch pull-left">
+                   <div class="umd_material-switch pull-left">
                        <span> Remenber Me</span>
                    </div>
-                   <div class="material-switch pull-right">
+                   <div class="umd_material-switch pull-right">
                        <input id="session_login" name="session_login" type="checkbox"/>
                        <label for="session_login" class="label-success"></label>
                    </div>

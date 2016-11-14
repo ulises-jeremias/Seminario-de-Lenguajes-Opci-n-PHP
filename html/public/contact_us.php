@@ -12,28 +12,26 @@
          </div>
        </div>
        <div class="modal-body">
-         <div role="form" onkeypress="return runScriptContact(event)">
-           <div class="group">
-             <input type="text" id="name" name="name">
-             <span class="highlight"></span><span class="bar"></span>
-             <label for="name">Your Name</label>
+         <div class="umd_form_container" style="padding: 0;">
+       		<div class="" onkeypress="return runScriptContact(event)">
+       			<form name="umd_form" class="umd_form">
+       				<div>
+       					<div class="umd_input-group">
+       						<input type="email" id="email" name="email" value=" <?php echo (isLoggedIn()) ? $_users[$_SESSION['app_id']]['email'] : null ?>">
+       						<label class="umd_label" for="email">Email</label>
+       					</div>
+                <div class="umd_input-group">
+       						<input type="text" id="subject" name="text">
+       						<label class="umd_label" for="text">Subject</label>
+       					</div>
+                <div class="umd_input-group">
+       						<input type="text" id="message" name="text">
+       						<label class="umd_label" for="text">Message</label>
+       					</div>
+               </div>
+       			</form>
            </div>
-           <div class="group">
-             <input type="text" id="email" name="email">
-             <span class="highlight"></span><span class="bar"></span>
-             <label for="email">Your Email</label>
-           </div>
-           <div class="group">
-             <input type="text" id="subject" name="subject">
-             <span class="highlight"></span><span class="bar"></span>
-             <label for="subject">Subject</label>
-           </div>
-           <div class="group">
-             <input type="text" id="message" name="message">
-             <span class="highlight"></span><span class="bar"></span>
-             <label for="message">Message </label>
-           </div>
-         </div>
+       	 </div>
          <button type="button" class="button" onclick="goContact()">Send
              <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
          </button>
@@ -43,12 +41,12 @@
             <br>
             <p>Or would you prefer to call?
                 <br>
-                <span><i class="fa fa-phone"> </i></span> + 01 234 565 280</p>
+                <span><i class="fa fa-phone"></i></span> 221-XXX-XXXX</p>
         </div>
        </div>
      </div>
    </div>
  </div>
 
-
+<script src="views/app/js/umd_form.js"></script>
 <script src="views/app/js/contact.js"></script>

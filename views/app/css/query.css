@@ -1,8 +1,19 @@
 @media screen and (max-width: 480px){
 
-	.jumb {
+	.umd_jumb {
 		margin-top: 25px;
 	}
+
+	._vehicle_img_ {
+		float: none;
+		max-width: 100%;
+		margin-bottom: 5px;
+		background-size: contain;
+	}
+
+	.texto-L, .texto-R { max-width: 200px;}
+	.texto-L { float: left; text-align:right; }
+	.texto-R { float: right; text-align:left; }
 
 	.leftmenu{
 		top: 18vh;

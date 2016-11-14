@@ -33,8 +33,8 @@ function goSignup() {
             if(connect.readyState == 4 && connect.status == 200) {
               if(connect.responseText == 1) {
                 result = '<div class="alert alert-dismissible alert-success">';
-                result += '<h4>Registro completado!</h4>';
-                result += '<p><strong>Estamos redireccionandote...</strong></p>';
+                result += '<h4>Registration completed!</h4>';
+                result += '<p><strong>You are being redirected...</strong></p>';
                 result += '</div>';
                 __('_AJAX_SIGNUP_').innerHTML = result;
                 location.reload();
@@ -44,8 +44,8 @@ function goSignup() {
             } else if(connect.readyState != 4) {
               result = '<div class="alert alert-dismissible alert-warning">';
               result += '<button type="button" class="close" data-dismiss="alert">x</button>';
-              result += '<h4>Procesando...</h4>';
-              result += '<p><strong>Estamos procesando tu registro...</strong></p>';
+              result += '<h4>Processing...</h4>';
+              result += '<p><strong>Your registration is being processed...</strong></p>';
               result += '</div>';
               __('_AJAX_SIGNUP_').innerHTML = result;
             }
@@ -58,9 +58,9 @@ function goSignup() {
           result += '<button type="button" class="close" data-dismiss="alert">x</button>';
           result += '<h4>ERROR</h4>';
           if (signup_query(email)) {
-            result += '<p><strong>Email tiene caracteres invalidos.</strong></p>';
+            result += '<p><strong>Email has invalid characters.</strong></p>';
           } else {
-            result += '<p><strong>Las contraseñas no coinciden o tienen caracteres inválidos.</strong></p>';
+            result += '<p><strong>Passwords do not match or have invalid characters.</strong></p>';
           }
           result += '</div>';
           __('_AJAX_SIGNUP_').innerHTML = result;
@@ -69,7 +69,7 @@ function goSignup() {
         result = '<div class="alert alert-dismissible alert-warning">';
         result += '<button type="button" class="close" data-dismiss="alert">x</button>';
         result += '<h4>ERROR</h4>';
-        result += '<p><strong>Todos los campos deben estar llenos.</strong></p>';
+        result += '<p><strong>All fields must be filled.</strong></p>';
         result += '</div>';
         __('_AJAX_SIGNUP_').innerHTML = result;
       }
@@ -77,7 +77,7 @@ function goSignup() {
       result = '<div class="alert alert-dismissible alert-danger">';
       result += '<button type="button" class="close" data-dismiss="alert">x</button>';
       result += '<h4>ERROR</h4>';
-      result += '<p><strong>Los términos y condiciones deben ser aceptados.</strong></p>';
+      result += '<p><strong>The terms and conditions must be accepted.</strong></p>';
       result += '</div>';
       __('_AJAX_SIGNUP_').innerHTML = result;
     }
