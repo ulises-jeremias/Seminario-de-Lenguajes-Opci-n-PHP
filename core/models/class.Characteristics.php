@@ -52,9 +52,18 @@
 
     public function Edit()
     {
-      $this->Errors('?view=management&error=');
-      $this->db->query("UPDATE Caracteristicas SET Caracteristica='$this->charact' WHERE idCaracteristica='$this->id';");
-      header('location: ?view=management&success=true');
+      try {
+        $this->Errors('?view=management&error=');
+        $sql = $this->db->query("SELECT * FROM Caracteristicas WHERE Caracteristica='$this->charact';");
+        if ($this->db->rows($sql) > 0) {
+          throw new Exception("The entered characteristic already exists");
+        } else {
+          $this->db->query("UPDATE Caracteristicas SET Caracteristica='$this->charact' WHERE idCaracteristica='$this->id';");
+          header('location: ?view=management&success=true');
+        }
+      } catch (Exception $error) {
+        header('location: ?view=management&error=' . $error->getMessage());
+      }
     }
 
     public function Delete()
