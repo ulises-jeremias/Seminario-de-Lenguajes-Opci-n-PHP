@@ -52,9 +52,18 @@
 
     public function Edit()
     {
-      $this->Errors('?view=management&error=');
-      $this->db->query("UPDATE Marcas SET Marca='$this->brand' WHERE idMarca='$this->id';");
-      header('location: ?view=management&success=true');
+      try {
+        $this->Errors('?view=management&error=');
+        $sql = $this->db->query("SELECT * FROM Marcas WHERE Marca='$this->brand';");
+        if ($this->db->rows($sql) > 0) {
+          throw new Exception("The entered brand already exists");
+        } else {
+          $this->db->query("UPDATE Marcas SET Marca='$this->brand' WHERE idMarca='$this->id';");
+          header('location: ?view=management&success=true');
+        }
+      } catch (Exception $error) {
+        header('location: ?view=management&error=' . $error->getMessage());
+      }
     }
 
     public function Delete()
