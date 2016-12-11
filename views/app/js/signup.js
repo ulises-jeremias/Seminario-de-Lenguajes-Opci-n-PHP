@@ -39,7 +39,11 @@ function goSignup() {
                 __('_AJAX_SIGNUP_').innerHTML = result;
                 location.reload();
               } else {
-                __('_AJAX_SIGNUP_').innerHTML = connect.responseText;
+                result = '<div class="alert alert-dismissible alert-danger">';
+            result += '<button type="button" class="close" data-dismiss="alert">x</button>';
+            result += '<p><strong>ERROR: </strong>' + connect.responseText + '</p>';
+            result += '</div>';
+            __('_AJAX_SIGNUP_').innerHTML = result;
               }
             } else if(connect.readyState != 4) {
               result = '<div class="alert alert-dismissible alert-warning">';
