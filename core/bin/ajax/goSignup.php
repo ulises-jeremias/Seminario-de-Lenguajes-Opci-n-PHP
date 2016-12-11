@@ -10,10 +10,7 @@ $pass = $_POST['pass']; //Encrypt($_POST['pass']);
 
 $sql = $db->query("SELECT idUsuario FROM usuarios WHERE email='$email' LIMIT 1;");
 if($db->rows($sql) > 0) {
-  $HTML = '<div class="alert alert-dismissible alert-danger">
-  <button type="button" class="close" data-dismiss="alert">x</button>
-  <strong>ERROR:</strong>The email entered already exists.
-</div>';
+  echo 'The email entered already exists.';
 } else {
   $db->query("INSERT INTO usuarios (clave, apellido, nombre, email, telefono)
               VALUES ('$pass', '$surname', '$name', '$email', '$tel');");
@@ -21,10 +18,9 @@ if($db->rows($sql) > 0) {
   $data = $db->get_array($sql_2);
   $_SESSION['app_id'] = $data['idUsuario'];
   $db->break_free($sql_2);
-  $HTML = 1;
+  echo 1;
 }
 
 $db->break_free($sql);
 $db->close();
-echo $HTML;
 ?>
