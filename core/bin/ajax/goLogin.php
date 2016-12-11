@@ -13,18 +13,12 @@ if(!empty($_POST['email']) and !empty($_POST['pass'])) {
     $_SESSION['time_online'] = time() - (60*6);
     echo 1;
   } else {
-    echo '<div class="alert alert-dismissible alert-danger">
-    <button type="button" class="close" data-dismiss="alert">x</button>
-    <strong>ERROR:</strong> Credentials are incorrect.
-  </div>';
+    echo 'Credentials are incorrect.';
   }
   $db->break_free($sql);
   $db->close();
 } else {
-  echo '<div class="alert alert-dismissible alert-danger">
-  <button type="button" class="close" data-dismiss="alert">x</button>
-  <strong>ERROR:</strong> All data must be full.
-</div>';
+  echo 'All data must be full.';
 }
 
 ?>
