@@ -42,10 +42,10 @@
            </div>
            <div class="group">
                <div class="">
-                   <div class="material-switch pull-left">
+                   <div class="umd_material-switch pull-left">
                        <span> Acepto terminos y condiciones</span>
                    </div>
-                   <div class="material-switch pull-right">
+                   <div class="umd_material-switch pull-right">
                        <input id="tyc_signup" name="tyc_signup" type="checkbox"/>
                        <label for="tyc_signup" class="label-success"></label>
                    </div>
